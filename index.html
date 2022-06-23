@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	701 % 14 == 0
+<script>
+	const num = 707;
+	const d = 50; 
+	let i = 0;
+	for (var lowNum = num; lowNum >= 1; lowNum--) {
+		let upNum = num+i;
+		let ufound  = false;
+		let lfound = false;
+ 
+		if ((lowNum % d )=== 0) lfound = true;
+
+		if ((upNum % d) === 0) ufound = true; 
+
+		if (lfound && ufound) {
+			console.log(`upNum:${upNum} lowNum:${lowNum}`);
+			break;
+		}else if(lfound){
+			console.log(`lowNum:${lowNum}`);
+			break;
+		}else if(ufound){
+			console.log(`upNum:${upNum}`);
+			break;
+		}
+		i++; 
+	}
+
+
+
+</script>
+
+</body>
+</html>
